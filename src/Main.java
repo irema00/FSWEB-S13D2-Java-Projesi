@@ -9,6 +9,10 @@ public class Main {
         System.out.println(isPerfectNumber(28));
         System.out.println(isPerfectNumber(5));
         System.out.println(isPerfectNumber(-1));
+        System.out.println("3-numberToWords");
+        System.out.println(numberToWords(123));
+        System.out.println(numberToWords(1010));
+        System.out.println(numberToWords(-12));
     }
 
     public static boolean isPalindrome(int number) {
@@ -33,6 +37,52 @@ public class Main {
                 }
             }
             return sum == number;
+        }
+    }
+
+    public static String numberToWords(int number) {
+        if (number < 0) {
+            return "Invalid Value";
+        } else {
+            String numStr = String.valueOf(number);
+            String[] numArray = numStr.split("");
+            StringBuilder words = new StringBuilder();
+
+            for (String n : numArray) {
+                switch (n) {
+                    case "0":
+                        words.append("Zero ");
+                        break;
+                    case "1":
+                        words.append("One ");
+                        break;
+                    case "2":
+                        words.append("Two ");
+                        break;
+                    case "3":
+                        words.append("Three ");
+                        break;
+                    case "4":
+                        words.append("Four ");
+                        break;
+                    case "5":
+                        words.append("Five ");
+                        break;
+                    case "6":
+                        words.append("Six ");
+                        break;
+                    case "7":
+                        words.append("Seven ");
+                        break;
+                    case "8":
+                        words.append("Eight ");
+                        break;
+                    case "9":
+                        words.append("Nine ");
+                        break;
+                }
+            }
+            return words.toString().trim();
         }
     }
 }
