@@ -29,9 +29,9 @@ public class Main {
 
         if (number < 0) {
             return false;
-        } else{
+        } else {
             int sum = 0;
-            for (int i = 1; i <= number/2; i++) {
+            for (int i = 1; i <= number / 2; i++) {
                 if (number % i == 0) {
                     sum += i;
                 }
